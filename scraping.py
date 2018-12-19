@@ -42,7 +42,6 @@ def searchSimilarNovel(main_novel_page,depth,novelList,target_list):
             if novel == j[0] or haveDone:
                 haveDone = True
                 break
-        print(haveDone)
         if not haveDone:
             target_list.append( (novel,i.find("a").attrs['href'],depth+1) )
     return target_list
