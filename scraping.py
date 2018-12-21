@@ -94,7 +94,7 @@ def startAnalytics():
     for i in novelList:
         data = cl.OrderedDict()
         data["作者名"] = i[1].replace("\xa0","").replace("\n"," ")
-        data["キーワード"] = i[2].replace("\xa0","").replace("\n"," ")
+        data["キーワード"] = i[2].replace("\xa0","").replace("\n"," ").split()
         data["ジャンル"] = i[3].replace("\xa0","").replace("\n"," ")
         data["感想"] = i[4].replace("\xa0","").replace("\n"," ")
         data["総合評価"] = i[5].replace("\xa0","").replace("\n"," ")
